@@ -39,7 +39,7 @@
       <!-- use this <a-entity camera> to support multiple-markers, otherwise use <a-marker-camera> instead of </a-marker> -->
       <a-entity camera></a-entity>
 
-      <a-assets id="assetsScene">
+      <a-assets>
         <a-asset-item
           id="animated-asset"
           src="https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/Avocado/glTF/Avocado.gltf"
@@ -48,7 +48,7 @@
     </a-scene>
   </body>
   <script>
-    let scene = document.getElementById("assestsScene");
-    alert(`update5: ${scene.innerHTML}`);
+    let item = document.getElementById("animated-asset");
+    alert(`update6: ${item.src}`);
   </script>
 </html>
