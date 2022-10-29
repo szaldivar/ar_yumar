@@ -18,7 +18,7 @@
     const params = new URLSearchParams(window.location.search);
     const p = params.get("p");
     let body = document.getElementById("body");
-    alert(`update9: ${p}`);
+    alert(`update1: ${p}`);
     body.innerHTML = `
     <a-scene
     id="aScene"
@@ -45,7 +45,7 @@
       <a-assets>
         <a-asset-item
           id="animated-asset"
-          src="https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/Avocado/glTF/Avocado.gltf"
+          src="${p}"
         ></a-asset-item>
       </a-assets>
     </a-scene>
