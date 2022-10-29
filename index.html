@@ -12,8 +12,12 @@
   <!-- add this script in order to load a large set of 3D model extensions-->
   <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
 
-  <body style="margin: 0px; overflow: hidden">
-    <!-- we add detectionMode and matrixCodeType to tell AR.js to recognize barcode markers -->
+  <body id="body" style="margin: 0px; overflow: hidden">
+  </body>
+  <script>
+    let body = document.getElementById("body");
+    alert(`update8: ${body.innerHTML}`);
+    body.innerHTML = `
     <a-scene
     id="aScene"
       embedded
@@ -35,10 +39,7 @@
       <a-marker id="animated-marker" type="barcode" value="6">
         <a-entity gltf-model="#animated-asset" scale="2"> </a-entity>
       </a-marker>
-
-      <!-- use this <a-entity camera> to support multiple-markers, otherwise use <a-marker-camera> instead of </a-marker> -->
       <a-entity camera></a-entity>
-
       <a-assets>
         <a-asset-item
           id="animated-asset"
@@ -46,9 +47,6 @@
         ></a-asset-item>
       </a-assets>
     </a-scene>
-  </body>
-  <script>
-    let item = document.getElementById("animated-asset");
-    alert(`update6: ${item.src}`);
+    `
   </script>
 </html>
