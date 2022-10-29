@@ -15,8 +15,10 @@
   <body id="body" style="margin: 0px; overflow: hidden">
   </body>
   <script>
+    const params = new URLSearchParams(window.location.search);
+    const p = params.get("p");
     let body = document.getElementById("body");
-    alert(`update8: ${body.innerHTML}`);
+    alert(`update9: ${p}`);
     body.innerHTML = `
     <a-scene
     id="aScene"
